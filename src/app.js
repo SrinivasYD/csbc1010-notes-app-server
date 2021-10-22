@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }))
 */
 
 /*
-  TODO-2: Upon database connection success, create the relavent table(s) if not exist.
+  TODO-2: Upon database connection success, create the relavent table(s) if it does not exist.
 */
 
 app.get('/', (req, res) => {
