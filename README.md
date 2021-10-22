@@ -38,4 +38,4 @@ npm start
 - Node v14+
 
 ### Related Project
-- [https://github.com/vivienfan/csbc1010-notes-app-client](https://github.com/vivienfan/csbc1010-notes-app-client)
+- [CSBC1010 Assigment 3 Client App - Notes](https://github.com/vivienfan/csbc1010-notes-app-client)
