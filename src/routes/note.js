@@ -2,20 +2,20 @@ const express = require('express')
 const router = express.Router()
 const { validateNote } = require('../utils/validators')
 
-/* ------------------------ TODO 2 - Create New Note ------------------------ */
+/* ------------------------ TODO-4 - Create New Note ------------------------ */
 router.post('/', (req, res) => {
   console.log(`[POST] http://localhost:${global.port}/note - Storing a new note`)
 
   /*
-  	TODO-2:
+  	TODO-4:
   		Given node content
-  		Create a new node and store the node to database,
+  		Create a new node and store the node to the database,
   		Return the newly created note object
 
   		Note content is stored in variable newText
 
-  		Your note object should be something similiar to this:
-      	[{ id, text, dateCreated, lastModified }]
+  		Your return object should be something similar to this:
+      	{ id, text, dateCreated, lastModified }
   */
   const newText = req.body.text
 
@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
 
 
 
-  // TODO-2.1: Remove this section once you start working on TODO-2
+  // TODO-4.1: Remove this section once you start working on TODO-4
   // --- Remove section begins ---
   const newNote = { id: 2, text: newText, dateCreated: new Date().toISOString().split('T')[0], lastModified: new Date().toISOString().split('T')[0] }
   if (!validateNote(newNote)) {
@@ -59,21 +59,21 @@ router.post('/', (req, res) => {
 })
 /* -------------------------------------------------------------------------- */
 
-/* ------------------------- TODO 3 - Update A Note ------------------------- */
+/* ------------------------- TODO-5 - Update A Note ------------------------- */
 router.put('/', (req, res) => {
   console.log(`[PUT] http://localhost:${global.port}/note - Updating note`)
 
   /*
-		TODO-3:
+		TODO-5:
 			Given note id and content
-			Update the note's content with its id in database
+			Update the note's content with the given id in the database
 			Return the updated note object
 
 			Note id is stored in variable noteId
-			Note content is stored in varibale newText
+			Note content is stored in variable newText
 
-			Your note object should be something similiar to this:
-        [{ id, text, dateCreated, lastModified }]
+			Your return object should be something similar to this:
+        { id, text, dateCreated, lastModified }
 	*/
 	const noteId = req.body.id
 	const newText = req.body.text
@@ -107,7 +107,7 @@ router.put('/', (req, res) => {
 
 
 
-		// TODO-3.1: Remove this section once you start working on TODO-3
+		// TODO-5.1: Remove this section once you start working on TODO-5
   	// --- Remove section begins ---
   	const updatedNote = { id: noteId, text: newText, dateCreated: '2021-04-15', lastModified: new Date().toISOString().split('T')[0]}
 		if (!validateNote(updatedNote)) {
@@ -118,13 +118,14 @@ router.put('/', (req, res) => {
 })
 /* -------------------------------------------------------------------------- */
 
-/* ------------------------- TODO 4 - Delete A Note ------------------------- */
+/* ------------------------- TODO-6 - Delete A Note ------------------------- */
 router.delete('/', (req, res) => {
   console.log(`[DELETE] http://localhost:${global.port}/note - Deleting note`)
 
   /*
-	  TODO-4:
-		  Delete note with id from database
+	  TODO-6:
+      Given a note id
+		  Delete note with the given id from the database
 
 		  Note id is stored in variable noteId 
 	*/
@@ -154,7 +155,7 @@ router.delete('/', (req, res) => {
 
 
 
-  // TODO-4.1: Remove this section once you start working on TODO-4
+  // TODO-6.1: Remove this section once you start working on TODO-6
   // --- Remove section begins ---
   res.send()
   // --- Remove section ends ---

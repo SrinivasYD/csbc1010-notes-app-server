@@ -2,16 +2,16 @@ const express = require('express')
 const router = express.Router()
 const { validateNoteArray } = require('../utils/validators')
 
-/* ------------------------ TODO 1 - Fetch All Notes ------------------------ */
+/* ------------------------ TODO-3 - Fetch All Notes ------------------------ */
 router.get('/', (req, res) => {
   console.log(`[GET] http://localhost:${global.port}/notes - Fetching all notes`)
 
   /* 
-    TODO-1:
-      Fetch all notes from database
+    TODO-3:
+      Fetch all notes from the database
       Return an array of note objects
 
-      Your note object should be something similiar to this:
+      Your return object should be something similar to this:
         [{ id, text, dateCreated, lastModified }]
   */
 
@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
 
 
 
-  // TODO-1.1: Remove this section once you start working on TODO-1
+  // TODO-3.1: Remove this section once you start working on TODO-3
   // --- Remove section begins ---
   const notes = [ 
     { id: 11, text: 'This is dummy note from fetch all!', dateCreated: '2021-04-15', lastModified: '2021-04-17' },
@@ -58,19 +58,19 @@ router.get('/', (req, res) => {
 })
 /* -------------------------------------------------------------------------- */
 
-/* ------------------------- TODO 5 - Search Notes -------------------------- */
+/* ------------------------- TODO-7 - Search Notes -------------------------- */
 router.get('/search/:searchKey', (req, res) => {
   console.log(`[GET] http://localhost:${global.port}/notes/search - Searching notes`)
 
   /*
-    TODO-5:
+    TODO-7:
       Given a search key
-      Fetch all notes from database those contains the search key in the note content
+      Fetch all notes from the database that contains the search key in the note content
       Return an array of matching note objects
 
       Search key is sotred in variable searchKey
 
-      Your notes object should be something similiar to this:
+      Your notes object should be something similar to this:
         [{ id, text, dateCreated, lastModified }]
   */
   const searchKey = req.params.searchKey
@@ -104,7 +104,7 @@ router.get('/search/:searchKey', (req, res) => {
 
 
 
-  // TODO-5.1: Remove this line once you start working on TODO-5
+  // TODO-7.1: Remove this line once you start working on TODO-7
   // --- Remove section begins ---
   const notes = [ { id: 5, text: `This is a dummy note from search contains search key ${searchKey}!`, dateCreated: '2021-04-15', lastModified: '2021-04-17' } ]
   if (!validateNoteArray(notes)) {
@@ -115,13 +115,13 @@ router.get('/search/:searchKey', (req, res) => {
 })
 /* -------------------------------------------------------------------------- */
 
-/* ----------------------- TODO 6 - Delete All Notes ------------------------ */
+/* ----------------------- TODO-8 - Delete All Notes ------------------------ */
 router.delete('/', (req, res) => {
   console.log(`[DELETE] http://localhost:${global.port}/notes - Deleting all notes`)
 
   /*
-    TODO-6:
-      Delete all notes from database
+    TODO-8:
+      Delete all notes from the database
   */
 
   /*
@@ -148,7 +148,7 @@ router.delete('/', (req, res) => {
 
 
 
-  // TODO-6.1: Remove this section once you start working on TODO-6
+  // TODO-8.1: Remove this section once you start working on TODO-8
   // --- Remove section begins ---
   res.send()
   // --- Remove section ends ---
