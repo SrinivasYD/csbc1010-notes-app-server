@@ -13,7 +13,7 @@ This is the Application Tier for a simple Notes app. Built in [Node.js](https://
 
 ### Steps to setup:
 
-1. [Fork this repo and clone your forked repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+1. Fork this repo and clone your forked repo. [How to do so?](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
 
 2. On your local machine, go to the folder and install dependencies
